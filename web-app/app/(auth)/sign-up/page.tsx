@@ -8,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import InputField from "@/components/form/InputField";
 import { zodResolver } from "@hookform/resolvers/zod";
 import FooterLink from "@/components/form/FooterLink";
-
-
+import { signUpWithEmail } from "@/lib/actions/auth.actions";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 function SignUp() {
-  
+  const router = useRouter();
 
   const {
     register,
@@ -34,7 +35,19 @@ function SignUp() {
     data: SignUpFormData,
   ): Promise<void> => {
     try {
-      console.log("Form Data:", data); // Debug log
+      const result = await signUpWithEmail(data);
+      if (!result.success) {
+        //  Show error toast
+        toast.error(result.message || "Sign up failed. Please try again.");
+
+        return;
+      }
+      // Show success toast
+      toast.success("Your account has been created.");
+
+      // Redirect to dashboard
+      router.push("/");
+      router.refresh(); //  Added refresh to update session
     } catch (error) {
       console.error(error);
     }

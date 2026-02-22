@@ -14,31 +14,38 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useRouter } from "next/navigation";
 import { LogOut, Loader2 } from "lucide-react";
 import NavItems from "./NavItems";
+import { signOut } from "@/lib/actions/auth.actions"; // ✅ Fixed import
 
-
-
+// ✅ Define User type if not in global.d.ts
 type User = {
   id: string;
   name: string;
   email: string;
 };
-const user: User = {
-  id: "123",
-  name: "John Doe",
-  email: "john.doe@example.com"
-};
 
-function UserDropdown() {
+function UserDropdown({ user }: { user: User }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false); // ✅ Added loading state
 
   const handleSignOut = async () => {
-   try {
-    setIsLoading(true);
-    router.push("/sign-in");
-   } catch (error) {
-    console.error("Sign out failed:", error);
-   }
+    try {
+      setIsLoading(true);
+
+      const result = await signOut(); // ✅ Call your server action
+
+      if (!result?.success) {
+        console.error("Sign out failed:");
+        // Optionally show toast notification here
+      }
+
+      // ✅ Redirect to sign-in
+      router.push("/sign-in");
+      router.refresh(); // ✅ Clear session state
+    } catch (error) {
+      console.error("Sign out error:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
