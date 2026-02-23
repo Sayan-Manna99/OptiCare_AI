@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Momentum",
+  title: "OptiCare AI – Eye Disease Detection",
   description:
-    "Build unstoppable consistency. Momentum is an AI-powered development dashboard for students to track progress, solve doubts, and maintain daily discipline in their learning journey.",
+    "OptiCare AI leverages advanced deep learning models to analyze retinal images and detect potential eye diseases in real time. Upload your scan, receive AI-powered predictions instantly.",
 };
 
 export default function RootLayout({

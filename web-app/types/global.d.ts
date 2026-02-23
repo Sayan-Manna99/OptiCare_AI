@@ -3,9 +3,9 @@ declare global {
     email: string;
     name: string;
     intro: string;
-    
+
   };
- 
+
 
   type FormInputProps = {
     name: string;
@@ -37,5 +37,9 @@ declare global {
     email: string;
     password: string;
   };
+  type NavItem = {
+    href: string;
+    label: string;
+  };
 }
-export {};
+export { };
