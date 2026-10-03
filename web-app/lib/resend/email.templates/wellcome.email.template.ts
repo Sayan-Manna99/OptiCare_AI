@@ -4,7 +4,7 @@ export const WELCOME_EMAIL_TEMPLATE = `
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to OcuSense AI</title>
+  <title>Welcome to OptiCare</title>
 </head>
 <body style="margin:0; padding:0; background-color:#f4f6f8; font-family:Arial, Helvetica, sans-serif;">
 
@@ -19,7 +19,7 @@ export const WELCOME_EMAIL_TEMPLATE = `
           <tr>
             <td style="padding-bottom:20px;">
               <h1 style="margin:0; font-size:24px; color:#111827;">
-                Welcome to OptiCare AI, {{name}} 👋
+                Welcome to OptiCare, {{name}} 👋
               </h1>
             </td>
           </tr>
@@ -28,7 +28,7 @@ export const WELCOME_EMAIL_TEMPLATE = `
           <tr>
             <td style="padding-bottom:20px;">
               <p style="margin:0; font-size:16px; line-height:1.6; color:#374151;">
-                Your account has been successfully created. We're excited to have you join OcuSense AI — your intelligent eye disease detection platform.
+                Your account has been successfully created. We're excited to have you join OptiCare — your intelligent eye disease detection platform.
               </p>
             </td>
           </tr>
@@ -37,7 +37,7 @@ export const WELCOME_EMAIL_TEMPLATE = `
           <tr>
             <td style="padding-bottom:20px;">
               <p style="margin:0; font-size:16px; line-height:1.6; color:#374151;">
-                With OcuSense AI, you can upload eye scan images and receive AI-powered predictions along with a detailed medical-style report delivered directly to your email.
+                With OptiCare, you can upload eye scan images and receive AI-powered predictions along with a detailed medical-style report delivered directly to your email.
               </p>
             </td>
           </tr>
@@ -65,7 +65,7 @@ export const WELCOME_EMAIL_TEMPLATE = `
               </p>
               
               <p style="margin:15px 0 0 0; font-size:12px; color:#9ca3af; line-height:1.5;">
-                © ${new Date().getFullYear()} OcuSense AI. All rights reserved.
+                © ${new Date().getFullYear()} OptiCare. All rights reserved.
               </p>
             </td>
           </tr>

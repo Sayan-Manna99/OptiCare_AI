@@ -137,11 +137,10 @@ export default function ScanPage() {
           onDragLeave={onDragLeave}
           onClick={() => fileInputRef.current?.click()}
           className={`relative rounded-2xl border-2 border-dashed cursor-pointer transition-all duration-200 p-12 flex flex-col items-center justify-center gap-4 text-center
-                        ${
-                          dragging
-                            ? "border-blue-500 bg-blue-600/10"
-                            : "border-gray-600 bg-gray-800 hover:border-blue-500/60 hover:bg-gray-800/80"
-                        }`}
+                        ${dragging
+              ? "border-blue-500 bg-blue-600/10"
+              : "border-gray-600 bg-gray-800 hover:border-blue-500/60 hover:bg-gray-800/80"
+            }`}
         >
           <div className="h-16 w-16 rounded-2xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center">
             <Upload className="h-7 w-7 text-blue-400" />

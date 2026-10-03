@@ -11,7 +11,7 @@ export async function sendWelcomeEmail({
   return await resend.emails.send({
     from: "Momentum <onboarding@resend.dev>",
     to: email,
-    subject: "Welcome to OptiCare AI",
+    subject: "Welcome to OptiCare",
     html,
   });
 }

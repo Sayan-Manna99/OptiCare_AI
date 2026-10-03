@@ -8,7 +8,7 @@ export const signUpEmail = inngest.createFunction(
   async ({ event, step }) => {
     return await step.run("send-welcome-email", async () => {
       const introText =
-        "OcuSense AI leverages advanced deep learning models to analyze retinal images and detect potential eye diseases in real time. Upload your scan, receive AI-powered predictions, and get a comprehensive report instantly.";
+        "OptiCare leverages advanced deep learning models to analyze retinal images and detect potential eye diseases in real time. Upload your scan, receive AI-powered predictions, and get a comprehensive report instantly.";
       const {
         data: { email, name },
       } = event;

@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OptiCare AI – Eye Disease Detection",
+  title: "OptiCare – Eye Disease Detection",
   description:
-    "OptiCare AI leverages advanced deep learning models to analyze retinal images and detect potential eye diseases in real time. Upload your scan, receive AI-powered predictions instantly.",
+    "OptiCare leverages advanced deep learning models to analyze retinal images and detect potential eye diseases in real time. Upload your scan, receive AI-powered predictions instantly.",
 };
 
 export default function RootLayout({

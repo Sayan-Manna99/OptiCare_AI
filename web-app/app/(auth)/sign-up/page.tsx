@@ -46,7 +46,7 @@ function SignUp() {
       toast.success("Your account has been created.");
 
       // Redirect to dashboard
-      router.push("/");
+      router.push("/dashboard");
       router.refresh(); //  Added refresh to update session
     } catch (error) {
       console.error(error);

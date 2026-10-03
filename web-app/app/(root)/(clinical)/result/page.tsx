@@ -22,6 +22,8 @@ const recommendations: Record<string, string> = {
     "Drusen deposits detected. This may indicate early Age-related Macular Degeneration. Regular monitoring is recommended.",
   NORMAL:
     "No abnormalities detected. Maintain annual eye check-ups and a healthy lifestyle.",
+  "Uncertain Prediction": "The model could not make a highly confident prediction. Please re-capture the image clearly and try again.",
+  "Invalid Image": "The uploaded file does not appear to be a valid retinal OCT scan. Please upload a correct medical image.",
 };
 
 /* Severity styling config */
@@ -103,18 +105,16 @@ function ResultContent() {
 
       {/* Condition Card */}
       <div
-        className={`rounded-2xl border p-6 flex items-start gap-5 ${
-          isNormal
+        className={`rounded-2xl border p-6 flex items-start gap-5 ${isNormal
             ? "bg-teal-400/5 border-teal-400/20"
             : "bg-red-500/5 border-red-500/20"
-        }`}
+          }`}
       >
         <div
-          className={`h-14 w-14 rounded-xl flex items-center justify-center shrink-0 ${
-            isNormal
+          className={`h-14 w-14 rounded-xl flex items-center justify-center shrink-0 ${isNormal
               ? "bg-teal-400/10 border border-teal-400/20"
               : "bg-red-500/10 border border-red-500/20"
-          }`}
+            }`}
         >
           {isNormal ? (
             <CheckCircle className="h-7 w-7 text-teal-400" />
@@ -129,9 +129,8 @@ function ResultContent() {
           </p>
           <h2 className="text-gray-100 text-2xl font-bold mt-1">{condition}</h2>
           <p
-            className={`text-sm mt-1 font-medium ${
-              isNormal ? "text-teal-400" : "text-red-400"
-            }`}
+            className={`text-sm mt-1 font-medium ${isNormal ? "text-teal-400" : "text-red-400"
+              }`}
           >
             {isNormal
               ? "No disease detected — your eyes appear healthy."
@@ -202,9 +201,7 @@ function ResultContent() {
       <div className="rounded-xl bg-yellow-400/5 border border-yellow-400/20 px-5 py-4 flex items-start gap-3">
         <Info className="h-4 w-4 text-yellow-400 mt-0.5 shrink-0" />
         <p className="text-yellow-400/80 text-xs leading-relaxed">
-          <strong>Disclaimer:</strong> This analysis is AI-generated and
-          intended for informational purposes only. It is not a medical
-          diagnosis. Please consult a qualified ophthalmologist.
+          <strong>Disclaimer:</strong> This AI-assisted screening result is generated for clinical decision support purposes only and does not replace professional medical evaluation.
         </p>
       </div>
 

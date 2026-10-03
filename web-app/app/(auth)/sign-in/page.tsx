@@ -1,6 +1,6 @@
 "use client";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { SignInSchema } from "@/lib/validations/auth.validation";
+import { SignInSchema, SignInFormData } from "@/lib/validations/auth.validation";
 import { Button } from "@/components/ui/button";
 import InputField from "@/components/form/InputField";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -41,7 +41,7 @@ function SignIn() {
       toast.success("You have successfully signed in.");
 
       // Redirect to dashboard
-      router.push("/");
+      router.push("/dashboard");
       router.refresh(); //  Added refresh to update session
     } catch (error) {
       console.error(error);

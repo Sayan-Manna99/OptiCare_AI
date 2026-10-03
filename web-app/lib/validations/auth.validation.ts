@@ -30,6 +30,12 @@ export const SignInSchema = z.object({
   password: z.string().min(1, "Password is required"),
 });
 
+export const PatientSignInSchema = z.object({
+  patientId: z.string().min(1, "Patient ID is required"),
+  password: z.string().min(1, "Password is required"),
+});
+
 // Export types
 export type SignUpFormData = z.infer<typeof SignUpSchema>;
 export type SignInFormData = z.infer<typeof SignInSchema>;
+export type PatientSignInFormData = z.infer<typeof PatientSignInSchema>;

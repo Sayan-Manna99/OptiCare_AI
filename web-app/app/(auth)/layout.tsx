@@ -21,7 +21,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <section className="auth-right-section">
         <div className="z-10 relative lg:mt-4 lg:mb-16">
           <blockquote className="auth-blockquote">
-            “OptiCare AI detected early signs of diabetic retinopathy in my scan that I had missed for years. The accuracy and speed of the AI is remarkable. A true life-saver.”
+            “OptiCare detected early signs of diabetic retinopathy in my scan that I had missed for years. The accuracy and speed of the AI is remarkable. A true life-saver.”
           </blockquote>
           <div className="flex items-center justify-between">
             <div>
